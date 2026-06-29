@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-amazon-bodyBg text-gray-900 font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Amazon styling buttons class */
+  .btn-amazon {
+    @apply bg-amazon-orange text-amazon-dark font-semibold px-4 py-2 rounded shadow-sm hover:bg-amazon-orangeHover active:scale-95 transition-all duration-150 text-center;
+  }
+  
+  .btn-amazon-secondary {
+    @apply bg-amazon-gold text-amazon-dark font-semibold px-4 py-2 rounded shadow-sm hover:bg-yellow-500 active:scale-95 transition-all duration-150 text-center;
+  }
+
+  .btn-amazon-dark {
+    @apply bg-amazon-lightDark text-white font-semibold px-4 py-2 rounded shadow-sm hover:bg-amazon-dark active:scale-95 transition-all duration-150 text-center;
+  }
+
+  .btn-amazon-outline {
+    @apply border border-gray-400 bg-white text-gray-800 font-semibold px-4 py-2 rounded shadow-sm hover:bg-gray-50 active:scale-95 transition-all duration-150 text-center;
+  }
+
+  /* Custom input classes */
+  .input-amazon {
+    @apply w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-amazon-orange focus:ring-1 focus:ring-amazon-orange transition-colors;
+  }
+
+  /* Scrollbar hider for cuisines strip */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
